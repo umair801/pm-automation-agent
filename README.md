@@ -6,6 +6,12 @@ Captures action items from 8+ sources, runs them through 6 Claude API agents, an
 
 ---
 
+## Deployment
+
+Live at **[pm.datawebify.com](https://pm.datawebify.com)**. Deployed on Railway with Docker. Health check at `/health`.
+
+---
+
 ## Architecture
 
 **Input Sources**
@@ -76,10 +82,6 @@ tests/            # Pytest test suite (44 tests)
 ```
 
 ---
-
-## Deployment
-
-Live at **[pm.datawebify.com](https://pm.datawebify.com)**. Deployed on Railway with Docker. Health check at `/health`.
 
 ```
 POST /capture/postmark     — Inbound email
