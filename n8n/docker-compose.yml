@@ -1,0 +1,42 @@
+##############################################################################
+# LEGACY REFERENCE ONLY
+# n8n has been replaced by Make.com as the primary orchestrator for this project.
+# This file is kept for reference and local development fallback only.
+# It is NOT used in the Railway production deployment.
+##############################################################################
+
+version: "3.8"
+
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: agai22_n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - NODE_ENV=production
+      - WEBHOOK_URL=http://localhost:5678/
+      - GENERIC_TIMEZONE=America/New_York
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=admin
+      - N8N_BASIC_AUTH_PASSWORD=datawebify2024
+      - N8N_LOG_LEVEL=info
+      - N8N_ENCRYPTION_KEY=datawebify_agai22_n8n_key_2024
+    volumes:
+      - agai22_n8n_data:/home/node/.n8n
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - agai22_network
+
+networks:
+  agai22_network:
+    driver: bridge
+
+volumes:
+  agai22_n8n_data:
+    driver: local
