@@ -79,7 +79,7 @@ tests/            # Pytest test suite (44 tests)
 
 ## Deployment
 
-Deployed on Railway with Docker. Health check at `/health`.
+Live at **[pm.datawebify.com](https://pm.datawebify.com)**. Deployed on Railway with Docker. Health check at `/health`.
 
 ```
 POST /capture/postmark     — Inbound email
