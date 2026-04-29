@@ -83,6 +83,8 @@ tests/            # Pytest test suite (44 tests)
 
 ---
 
+## API Endpoints
+
 ```
 POST /capture/postmark     — Inbound email
 POST /capture/twilio       — Inbound SMS
@@ -102,4 +104,4 @@ GET  /health               — Health check
 
 ---
 
-Built by [Muhammad Umair](https://datawebify.com) — Agentic AI Specialist
+Built by [Muhammad Umair](https://upwork.com/freelancers/umair801) — Agentic AI Specialist | [datawebify.com](https://datawebify.com)
